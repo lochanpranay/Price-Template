@@ -1,0 +1,168 @@
+
+:root {
+  --purple: #8b50f3;
+  --white: white;
+  --medium: 1rem;
+  --small: 0.625rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 1rem;
+}
+
+
+.pricecards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: rgba(0, 0, 0, 0.82);
+
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.price-card {
+  background-color: var(--white);
+  padding: 2rem;
+  box-shadow: 
+  5px 5px 8px rgba(120, 120, 120, 0.35),
+  -5px -5px 8px rgba(120, 120, 120, 0.35);
+
+  border-radius: 8px;
+
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 275px;
+}
+
+
+
+.tag {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  font-size: 0.625rem;
+  padding: 0.125rem 0.625rem;
+  font-weight: 500;
+  background-color: #bf89f6;
+  color: white;
+  border-radius: 3px;
+}
+
+.price-card .pricing {
+  font-weight: 700;
+  margin: 1rem;
+}
+
+.pricing .amount {
+  text-align: center;
+}
+
+.price-card .sign {
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+
+.price-card .value {
+  font-size: 2.25rem;
+}
+
+.price-card .plan {
+  font-size: 0.875rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+
+.horz-separator {
+  width: 80%;
+  border-top: 1px solid rgba(120, 120, 120, 0.35);
+}
+
+.horz-separator.white {
+  width: 80%;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.features {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  align-self: center;
+}
+
+.features p {
+  padding: 0.3125rem;
+}
+.price-card .icon {
+  width: 12px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.btn {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.625rem 2.2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+
+  transition: transform 0.35s;
+}
+
+.btn.normal {
+  background-color: #8b50f3;
+  color: white;
+}
+
+.btn.btn-purple {
+  background-color: white;
+  color: #8b50f3;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.07, 1.07);
+}
+
+.card-two {
+  background-color: #8b50f3;
+  color: white;
+  z-index: 2;
+  transform: scale(1.07);
+}
+
+@media screen and (max-width:720px) {
+  .pricecards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .price-card {
+    margin-bottom: 2rem;
+  }
+
+  .card-two {
+    transform: scale(1,1);
+  }
+
+}
